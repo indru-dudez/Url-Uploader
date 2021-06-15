@@ -118,7 +118,7 @@ async def save_photo(bot, update):
         )
 
 
-@pyrogram.Client.on_message(pyrogram.filters.command(["deletethumb", "deletethumb@SINNER_ZX_bot"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["deletethumb", "deletethumb@SINNER_UP_bot"]))
 async def delete_thumbnail(bot, update):
     if update.from_user.id in Config.BANNED_USERS:
         await bot.delete_messages(
