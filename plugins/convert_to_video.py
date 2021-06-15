@@ -32,7 +32,7 @@ from hachoir.parser import createParser
 from PIL import Image
 
 
-@pyrogram.Client.on_message(pyrogram.filters.command(["convert2video", "convert2video@SINNER_ZX_bot"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["convert2video", "convert2video@SINNER_UP_bot"]))
 async def convert_to_video(bot, update):
     if update.from_user.id in Config.BANNED_USERS:
         await bot.send_message(
