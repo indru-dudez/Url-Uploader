@@ -95,7 +95,7 @@ def unzip(bot, update):
                     chat_id=update.chat.id,
                     text=Translation.EXTRACT_ZIP_ERRS_OCCURED,
                     disable_web_page_preview=True,
-                    parse_mode=pyrogram.ParseMode.HTML,
+                    parse_mode="HTML",
                     message_id=a.message_id
                 )
             else:
