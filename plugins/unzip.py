@@ -32,13 +32,6 @@ from helper_funcs.display_progress import progress_for_pyrogram, humanbytes
 @pyrogram.Client.on_message(pyrogram.filters.command(["unzip", "unzip@SINNER_ZX_bot"]))
 def unzip(bot, update):
     TRChatBase(update.from_user.id, update.text, "un7z@SINNER_ZX_bot")
-    if str(update.from_user.id) not in Config.SUPER7X_DLBOT_USERS:
-        bot.send_message(
-            chat_id=update.chat.id,
-            text=Translation.NOT_AUTH_USER_TEXT,
-            reply_to_message_id=update.message_id
-        )
-        return
     saved_file_path = Config.DOWNLOAD_LOCATION + \
         "/" + str(update.from_user.id) + ".unzip.zip"
     if os.path.exists(saved_file_path):
